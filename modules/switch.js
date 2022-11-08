@@ -1,7 +1,7 @@
 // One page App code
 
 export default class Switch {
-  static changeForm(key) {
+  static changeForm = (key) => {
     const bookContainer = document.querySelector('.container');
     const awesomeForm = document.querySelector('.form');
     const contactForm = document.querySelector('.contact');

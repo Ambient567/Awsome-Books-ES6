@@ -5,13 +5,13 @@ import { DateTime } from './modules/luxon.js';
 // UI Class: Handle UI Tasks
 
 class UI {
-  static displayBooks() {
+  static displayBooks = () => {
     const books = Store.getBooks();
 
     books.forEach((book) => UI.addBookToList(book));
-  }
+  };
 
-  static addBookToList(book) {
+  static addBookToList = (book) => {
     const list = document.querySelector('.book-list');
 
     const div = document.createElement('div');
@@ -25,16 +25,16 @@ class UI {
     `;
 
     list.appendChild(div);
-  }
+  };
 
   // remove function
-  static removeBook(element) {
+  static removeBook = (element) => {
     if (element.classList.contains('delete')) {
       element.parentElement.remove();
     }
   }
 
-  static clearfields() {
+  static clearfields = () => {
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
   }
